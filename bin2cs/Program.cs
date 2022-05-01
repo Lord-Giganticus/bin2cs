@@ -7,7 +7,6 @@ foreach (var arg in args)
     {
         Template t = new FileInfo(arg);
         (Span<byte> span, string name) = t.Process();
-        name += ".cs";
         using var f = File.Create(name);
         f.Write(span);
     }

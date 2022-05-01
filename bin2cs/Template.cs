@@ -45,7 +45,7 @@ public class Template
             }
         }
         sb.Append("};\n}");
-        return (e.GetBytes(sb.ToString()), stem);
+        return (e.GetBytes(sb.ToString()), stem + ".cs");
     }
 
     public static implicit operator Template(FileInfo f) => new(f);
